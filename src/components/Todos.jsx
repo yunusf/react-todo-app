@@ -3,8 +3,8 @@ import TodoItem from './TodoItem'
 
 const Todos = ({ todos }) => {
   return (
-    <div>
-      <h1>This is Todos component</h1>
+    <div style={styles.container}>
+      {/* <h1>This is Todos component</h1> */}
       {
         todos.map((todo) => {
           // load data di todos.js
@@ -16,6 +16,13 @@ const Todos = ({ todos }) => {
       }
     </div>
   )
+}
+
+const styles = {
+  container: {
+    width: '40%',
+    margin: '0 auto',
+  }
 }
 
 export default Todos
