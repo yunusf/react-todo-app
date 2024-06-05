@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Todos from './components/Todos'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -25,9 +26,13 @@ function App() {
     <div>
       <h1>My Todo List</h1>
       {/* Gunakan method map di sini */}
+      <p>todo di app.js</p>
       {
-        todos.map((todo) => <p key={todo.id}>{todo.title}</p>)
+        todos.map((todo) => <p key={todo.id}>id: {todo.id} | {todo.title}</p>)
       }
+
+      {/* Berikan data-nya ke component Todos */}
+      <Todos todos={ todos } /> {/* Menampilkan component Todos */}
     </div>
   )
 }
